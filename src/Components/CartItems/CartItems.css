@@ -192,9 +192,11 @@
         margin-left: 3%;
     }*/
 
-    /*.cartItems-promobox {
-        width: 100%;
-    }*/
+    .cartItems-promobox {
+        width: auto;
+        padding-left: 0;
+        margin: 15px 5px;
+    }
 
     .cartItems-promobox input {
         width: 54%;
@@ -203,5 +205,6 @@
 
     .cartItems-promobox button{
         padding: 0;
+        width: 40%;
     }
 }
