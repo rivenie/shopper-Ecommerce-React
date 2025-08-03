@@ -188,15 +188,20 @@
         width: 100%;
     }
 
-    .cartItems-promocode p {
+    /*.cartItems-promocode p {
         margin-left: 3%;
-    }
+    }*/
 
-    .cartItems-promobox {
+    /*.cartItems-promobox {
         width: 100%;
-    }
+    }*/
 
     .cartItems-promobox input {
-        width: auto;
+        width: 54%;
+        padding-left: 5%;
+    }
+
+    .cartItems-promobox button{
+        padding: 0;
     }
 }
