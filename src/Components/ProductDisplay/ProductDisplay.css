@@ -110,7 +110,7 @@
     }
 
     .productDisplay-main-img {
-        width: 100%;
+        width: 100% !important;
         height: auto;
     }
 
@@ -124,8 +124,11 @@
     }
 
     .productDisplay-img-list img {
-        width: 80px;
-        height: auto
+        width: 80px !important;
+        height: 96px !important;
+        object-fit: cover;
+        flex-shrink: 0;
+        /* Evita que se reduzcan */
     }
 
     .productDisplay-right {
@@ -144,7 +147,7 @@
     }
 
     .productDisplay-right-size h1 {
-        margin-top: 30px; 
+        margin-top: 30px;
         align-self: flex-start;
     }
 
