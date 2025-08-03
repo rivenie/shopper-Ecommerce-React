@@ -124,7 +124,7 @@
     }
 
     .productDisplay-img-list img {
-        width: 80px !important;
+        width: 100% !important;
         height: 96px !important;
         object-fit: cover;
         flex-shrink: 0;
