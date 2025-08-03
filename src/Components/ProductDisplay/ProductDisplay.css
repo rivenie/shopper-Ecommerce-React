@@ -119,8 +119,8 @@
     }
 
     .productDisplay-img-list {
-        flex-direction: row;
-        justify-content: center;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
     }
 
     .productDisplay-img-list img {
