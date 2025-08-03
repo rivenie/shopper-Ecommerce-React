@@ -1,4 +1,4 @@
-.loginSignUp{
+.loginSignUp {
     width: 100%;
     height: 80vh;
     background-color: #fce3fe;
@@ -6,7 +6,7 @@
     padding-bottom: 100px;
 }
 
-.loginSignUp-container{
+.loginSignUp-container {
     width: 580px;
     height: 600px;
     background-color: white;
@@ -14,18 +14,18 @@
     padding: 40px 60px;
 }
 
-.loginSignUp-container h1{
+.loginSignUp-container h1 {
     margin: 20px 0px;
 }
 
-.loginSignUp-fields{
+.loginSignUp-fields {
     display: flex;
     flex-direction: column;
     gap: 29px;
     margin-top: 30px;
 }
 
-.loginSignUp-fields input{
+.loginSignUp-fields input {
     height: 72px;
     width: 100%;
     padding-left: 20px;
@@ -35,7 +35,7 @@
     font-size: 18px;
 }
 
-.loginSignUp-container button{
+.loginSignUp-container button {
     width: 580px;
     height: 72px;
     color: white;
@@ -47,19 +47,19 @@
     cursor: pointer;
 }
 
-.loginSignUp-login{
+.loginSignUp-login {
     margin-top: 20px;
     color: #5c5c5c;
     font-size: 18px;
     font-weight: 500;
 }
 
-.loginSignUp-login span{
+.loginSignUp-login span {
     color: #ff4141;
     font-weight: 600;
 }
 
-.loginSignUp-agree{
+.loginSignUp-agree {
     display: flex;
     align-items: center;
     margin-top: 25px;
@@ -69,3 +69,34 @@
     font-weight: 500;
 }
 
+
+
+
+@media (max-width: 768px) {
+
+    .loginSignUp {
+        padding-top: initial;
+    }
+
+    .loginSignUp-container {
+        padding: 40px 40px;
+        width: auto;
+        background-color: initial
+    }
+
+    .loginSignUp-container h1 {
+        text-align: center;
+    }
+
+    .loginSignUp-fields {
+        align-items: center;
+    }
+
+    .loginSignUp-fields input {
+        width: 100%
+    }
+
+    .loginSignUp-container button {
+        width: 100%
+    }
+}

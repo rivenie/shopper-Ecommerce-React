@@ -4,16 +4,22 @@ import { ShopContext } from "../../Context/ShopContext";
 import remove_icon from "../Assets/cart_cross_icon.png";
 
 // Aquí se va a colocar los items que se han dado "Add to cart". Esto se hace gracias a la función map. Se aplica a
-// all_product para recorrer todos los productos. Dentro se aplica una condicional. Se coge el objeto cartItems 
+// all_product para recorrer todos los productos. Dentro se aplica una condicional. Se coge el objeto cartItems
 // (donde están los 35 id con valor 0) y se selecciona de esa lista el elemento con id que sea igual al id de uno
-// de los productos. Al hacer match se selecciona dicho elemento del object y se evalúa si es mayor a 0. Es decir, 
+// de los productos. Al hacer match se selecciona dicho elemento del object y se evalúa si es mayor a 0. Es decir,
 // si ha sido añadido al carrito (cartItems). Si si ha sido elegido. Se retorna un div con muchos datos
 
-
 const CartItems = () => {
-  const { getTotalCartAmount, all_product, cartItems, removeFromCart, handleSendToWhatsApp} = useContext(ShopContext);
+  const {
+    getTotalCartAmount,
+    all_product,
+    cartItems,
+    removeFromCart,
+    handleSendToWhatsApp,
+  } = useContext(ShopContext);
   return (
     <div className="cartItems">
+      {/* Encabezados (solo visibles en desktop) */}
       <div className="cartItems-format-main">
         <p>Products</p>
         <p>Title</p>
@@ -23,25 +29,30 @@ const CartItems = () => {
         <p>Remove</p>
       </div>
       <hr />
+
       {all_product.map((e) => {
-        if (cartItems[e.id] > 0) {          
+        if (cartItems[e.id] > 0) {
           return (
             <div key={e.id}>
               <div className="cartItems-format cartItems-format-main">
-                <img src={e.image} alt="" className="cartIcon-product-icon" />
-                <p>{e.name}</p>
-                <p>{e.new_price}</p>
-                <button className="cartItems-quantity">
+                <img
+                  src={e.image}
+                  alt={e.name}
+                  className="cartIcon-product-icon"
+                  data-label="Product"
+                />
+                <p data-label="Title">{e.name}</p>
+                <p data-label="Price">{e.new_price}</p>
+                <button className="cartItems-quantity" data-label="Quantity">
                   {cartItems[e.id]}
                 </button>
-                <p>${e.new_price * cartItems[e.id]}</p>
+                <p data-label="Total">${e.new_price * cartItems[e.id]}</p>
                 <img
                   className="cartItems-remove-icon"
                   src={remove_icon}
-                  onClick={() => {
-                    removeFromCart(e.id);
-                  }}
-                  alt=""
+                  onClick={() => removeFromCart(e.id)}
+                  alt="Remove item"
+                  data-label="Action"
                 />
               </div>
               <hr />
